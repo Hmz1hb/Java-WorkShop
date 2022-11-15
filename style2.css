@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+*{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+#side-nav{
+    display: block;
+    height: 100%;
+    width: 30%;
+    position: fixed;
+    z-index: 1;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+#side-nav a{
+    padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+    margin-right: 1.5rem ;
+    text-decoration: none;
+    font-size: 0.1rem;
+    color: #818181;
+    display: block;
+    cursor: pointer;
+    font-size: medium;
+}
+#side-nav a:hover {
+    color: #f1f1f1;
+    transition: all 0.3s;
+}
+main {
+    margin-left: 35%;
+}
+h1{
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 64px;
+    margin-bottom: 35px;
+    width: fit-content;
+}
+h3{
+    padding: 10px;
+    font-weight: 900;
+    font-size: 24px;
+    background-color: #C7C7C7;
+    width: fit-content;
+}
+p{
+    padding: 15px;
+    background-color: #F1F1F1;
+    width: 90%;
+    margin-bottom: 30px;
+}
+#demo-cont{
+    padding: 15px;
+    background-color: #F1F1F1;
+    width: 90%;
+    margin-bottom: 30px;
+}
+#Source-Code{
+    padding: 15px;
+    background-color: #F1F1F1;
+    width: 90%;
+    margin-bottom: 30px;
+}
+/* Ajouter */
+p img{
+    width: 100%;
+}
+#demo-cont #mot{
+    width: 10%;
+}
+#demo-cont #phrase{
+    width: 37%;
+}
+#demo-cont #rech,#sup,#cptvoyelle{
+    background-color: black;
+    color: white;
+    margin: 2%;
+    width: 30%;
+}
+#demo-cont #valider,#trier{
+    background-color: black;
+    color: white;
+}
+#demo-cont #test{
+    background-color:#C7C7C7;
+    text-align: center;
+    margin: 2% 2%;
+}
+#demo-cont td input{
+    width: 40%;
+}
+#demo-cont table{
+    display: none;
+}

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+*{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+#side-nav{
+    display: block;
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    z-index: 1;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+#side-nav a{
+    padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+    margin-right: 1.5rem ;
+    text-decoration: none;
+    font-size: 0.1rem;
+    color: #818181;
+    display: block;
+    cursor: pointer;
+    font-size: medium;
+}
+#side-nav a:hover {
+    color: #f1f1f1;
+    transition: all 0.3s;
+}
+main {
+    margin-left: 30%;
+}
+h1{
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 64px;
+    margin-bottom: 3--5px;
+    width: fit-content;
+}
+h3{
+    padding: 10px;
+    font-weight: 900;
+    font-size: 24px;
+    width: fit-content;
+}
+p{
+    padding: 15px;
+    background-color: #F1F1F1;
+    width: 90%;
+    margin-bottom: 30px;
+}
+#demo-cont{
+    padding: 15px;
+    background-color: #F1F1F1;
+    width: 90%;
+    margin-bottom: 30px;
+}
+#Source-Code{
+    padding: 15px;
+    background-color: #F1F1F1;
+    width: 90%;
+    margin-bottom: 30px;
+}

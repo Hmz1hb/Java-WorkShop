@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.html">
+    <link rel="stylesheet" href="./Les fonctions.css">
+    <title>Calculatrice</title>
+</head>
+<body>
+    <header>
+        <nav id="side-nav">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./les-condition.html">Les conditions</a></li>
+                <li><a href="./swap.html">Les variables</a></li>
+                <li><a href="./Les fonctions.html">Les fonctions</a></li>
+                <li>
+                    <a href="">Les chaines</a>
+                        <ul>
+                                <li><a href="./chaines1.html">Compter le nombre de voyelles dans une chaine</a></li>
+                                <li><a href="./chaine2.html">Recherche et suppression dans une chaine</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="">Les tableaux</a>
+                    <ul>
+                        <li><a href="./recherche-dans-un-tableau.html">Recherche dans un tableau</a></li>
+                        <li><a href="./tri dun tableux .html">Tri d'un tableau</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Les boucles</a>
+                    <ul>
+                        <li><a href="./Les boucles imbriquées.html">Les boucles imbriquées</a></li>
+                        <li><a href="./enonce4.html">La boucle while</a></li>
+                        <li><a href="./Enonce3.html">La boucle for</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="title">Calculatrice</h1>
+        <section id="Enonce">
+                <h3>Enoncé</h3>
+                <section>
+                    <p id="Enonce-txt">Créez 4 fonctions Javascript (Somme, Soustraction, Division, Multiplication). L’utilisateur saisie deux nombres dans deux inputs, choisi ensuite une opération arithmétique. Le résultat est donné par l’une des 4 fonctions Javascript. </p>
+                </section>
+        </section>
+        <section id="demo">
+            <h3>demo</h3>
+            <section id="demo-cont">
+                <input id="num1" type="number">
+                <input id="num2" type="number">
+                <br>
+                <section id="op">
+                    <button onclick="add()">+</button>
+                    <button onclick="min()">-</button>
+                    <button onclick="mul()">X</button>
+                    <button onclick="dev();">/</button>
+                </section>
+                <br>
+                <br>
+                <output id="answer">Your answer here</output>
+            </section>
+        </section>
+        <section>
+            <h3>Code Source</h3>
+            <section id="Source-Code">
+                <p>   <br> function add(){
+                    var a,b,c;
+                    a=Number(document.getElementById("num1").value);
+                    b=Number(document.getElementById("num2").value);
+                    c= a + b;
+                    document.getElementById("answer").value= c;
+                } <br>
+                 <br> function mul(){
+                    var a,b,c;
+                    a=Number(document.getElementById("num1").value);
+                    b=Number(document.getElementById("num2").value);
+                    c= a * b;
+                    document.getElementById("answer").value= c;
+                } <br>
+                <br> function min(){
+                    var a,b,c;
+                    a=Number(document.getElementById("num1").value);
+                    b=Number(document.getElementById("num2").value);
+                    c= a - b;
+                    document.getElementById("answer").value= c;
+                } <br>
+                <br> function dev(){
+                    var a,b,c;
+                    a=Number(document.getElementById("num1").value);
+                    b=Number(document.getElementById("num2").value);
+                    c= a / b;
+                    document.getElementById("answer").value= c;
+                }
+            </p>
+            </section>
+        </section>
+    </main>
+    <script>
+        function add(){
+            var a,b,c;
+            a=Number(document.getElementById("num1").value);
+            b=Number(document.getElementById("num2").value);
+            c= a + b;
+            document.getElementById("answer").value= c;
+        }
+        function mul(){
+            var a,b,c;
+            a=Number(document.getElementById("num1").value);
+            b=Number(document.getElementById("num2").value);
+            c= a * b;
+            document.getElementById("answer").value= c;
+        }
+        function min(){
+            var a,b,c;
+            a=Number(document.getElementById("num1").value);
+            b=Number(document.getElementById("num2").value);
+            c= a - b;
+            document.getElementById("answer").value= c;
+        }
+        function dev(){
+            var a,b,c;
+            a=Number(document.getElementById("num1").value);
+            b=Number(document.getElementById("num2").value);
+            c= a / b;
+            document.getElementById("answer").value= c;
+        }
+    </script>
+</body>
+</body>
+</html>

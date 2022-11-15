@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.html">
+    <link rel="stylesheet" href="./tri dun tableux.css">
+    <title>Tri d'un tableau</title>
+</head>
+<body>
+    <header>
+        <nav id="side-nav">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./les-condition.html">Les conditions</a></li>
+                <li><a href="./swap.html">Les variables</a></li>
+                <li><a href="./Les fonctions.html">Les fonctions</a></li>
+                <li>
+                    <a>Les chaines</a>
+                        <ul>
+                                <li><a href="./Chaines1.html">Compter le nombre de voyelles dans une chaine</a></li>
+                                <li><a href="./chaine2.html">Recherche et suppression dans une chaine</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a>Les tableaux</a>
+                    <ul>
+                        <li><a href="./recherche-dans-un-tableau.html">Recherche dans un tableau</a></li>
+                        <li><a href="./tri dun tableux .html">Tri d'un tableau</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>Les boucles</a>
+                    <ul>
+                        <li><a href="./Les boucles imbriquées.html">Les boucles imbriquées</a></li>
+                        <li><a href="./enonce4.html">La boucle while</a></li>
+                        <li><a href="./Enonce3.html">La boucle for</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="title">Tri d'un tableau</h1>
+        <section id="Enonce">
+                <h3>Enoncé</h3>
+                <section>
+                    <p id="Enonce-txt">Ecrire un programme Javascript qui permet de trier un tableau d’entier (Utiliser n’importe quel algorithme de tri mais surtout pas la fonction Sort de l’objet ary1).
+                        L’utilisateur commence tout d’abord par saisir la taille du tableau, ensuite il remplit le tableau pour cliquer à la fin sur un bouton trier : celui-ci affichera le tableau en ordre croissant ou décroissant.
+                    </p>
+                </section>
+        </section>
+        <section id="demo">
+            <h3>demo</h3>
+            <section id="demo-cont">
+                <p>Donner la taille du tableau <input id="box-num"><button id="val"  onclick="InpChek()">Valider</button></p> 
+                <p>Veuiller remplir le tableau <span id="inp"></span> <button id="dra" onclick="tri()">Trier</button></p>
+                <section id="out-inp">  
+                    <p>Le tableau reafficher ici après son tri</p>
+                    </section>
+            </section>
+        </section>
+        <section>
+            <h3>Code Source</h3>
+            <section id="Source-Code">
+                <p>
+                    function InpChek(){  
+                        <br>
+    var inputs = document.getElementById('inp') <br>
+    var boxNum = parseInt(document.getElementById('box-num').value) <br>
+    inputs.innerHTML=""; <br>
+    for(x=1 ; x<= boxNum ;x++){ <br>
+        var inp = document.createElement('INPUT'); <br>
+        inp.setAttribute('id', 'inp'+x) <br>
+        inputs.appendChild(inp) <br>
+    } <br>
+} <br>
+function tri() <br>
+{ <br>
+   var boxNum = parseInt(document.getElementById('box-num').value) <br>
+   var  outinpt =  document.getElementById('out-inp') <br>
+   outinpt.innerHTML=""; <br>
+for(x=0 ; x< boxNum ;x++) <br>
+{ <br>
+    var inpsr = document.createElement('INPUT') <br>
+    inpsr.setAttribute('id', 'out-inp'+x) <br>
+    outinpt.appendChild(inpsr) <br>
+} <br>
+const ary1 = [] <br>
+const ary2 = [] <br>
+    for (let i = 1; i <= boxNum; i++) <br>
+     { <br>
+        ary1.push(parseInt(document.getElementById('inp'+i).value)) <br>
+     } <br>
+
+    for (let i = 0; i < boxNum; i++) <br>
+     { <br>
+        let min = Math.min(...ary1) <br>
+        const index = ary1.indexOf(min); <br>
+        ary2.push(min) <br>
+        document.getElementById('out-inp'+i).value = min <br>
+        ary1.splice(index,1) <br>
+    } <br>
+    } <br>
+                </p>
+        </section>
+    </main>
+    <script>
+function InpChek()
+{
+    var inputs = document.getElementById('inp')
+    var boxNum = parseInt(document.getElementById('box-num').value)
+    inputs.innerHTML="";
+    if( boxNum<=10){
+    for(x=1 ; x<= boxNum ;x++){
+        var inp = document.createElement('INPUT');
+        inp.setAttribute('id', 'inp'+x)
+        inputs.appendChild(inp)
+    }
+}
+    else{
+        alert("enter une valeur entre 1 et 10")
+    }
+}
+function tri()
+{
+   var boxNum = parseInt(document.getElementById('box-num').value)
+   var outinpt =  document.getElementById('out-inp')
+   outinpt.innerHTML="";
+for(x=0 ; x< boxNum ;x++)
+{
+    var inpsr = document.createElement('INPUT')
+    inpsr.setAttribute('id', 'out-inp'+x)
+    outinpt.appendChild(inpsr)
+}
+const ary1 = []
+const ary2 = []
+    for (let i = 1; i <= boxNum; i++)
+     {
+        ary1.push(parseInt(document.getElementById('inp'+i).value))
+     }
+
+    for (let i = 0; i < boxNum; i++)
+     {
+        let min = Math.min(...ary1)
+        const index  = ary1.indexOf(min);
+        ary2.push(min)
+        document.getElementById('out-inp'+i).value = min
+        ary1.splice(index,1)
+    }
+    }
+    </script>
+</body>
+</body>
+</html>

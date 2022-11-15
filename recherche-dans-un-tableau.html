@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./recherche-dans-un-tableau.css">
+    <title>Tri d'un tableau</title>
+</head>
+<body>
+    <header>
+        <nav id="side-nav">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./les-condition.html">Les conditions</a></li>
+                <li><a href="./swap.html">Les variables</a></li>
+                <li><a href="./Les fonctions.html">Les fonctions</a></li>
+                <li>
+                    <a>Les chaines</a>
+                        <ul>
+                                <li><a href="./Chaines1.html">Compter le nombre de voyelles dans une chaine</a></li>
+                                <li><a href="./chaine2.html">Recherche et suppression dans une chaine</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a>Les tableaux</a>
+                    <ul>
+                        <li><a href="./recherche-dans-un-tableau.html">Recherche dans un tableau</a></li>
+                        <li><a href="./tri dun tableux .html">Tri d'un tableau</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>Les boucles</a>
+                    <ul>
+                        <li><a href="./Les boucles imbriquées.html">Les boucles imbriquées</a></li>
+                        <li><a href="./enonce4.html">La boucle while</a></li>
+                        <li><a href="./Enonce3.html">La boucle for</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="title">Tri d'un tableau</h1>
+        <section id="Enonce">
+                <h3>Enoncé</h3>
+                <section>
+                    <p id="Enonce-txt">Ecrire un programme Javascript qui permet de rechercher une valeur dans un tableau d’entier. 
+                        L’utilisateur doit suivre les étapes suivantes :
+                        1.	Saisir la taille du tableau, 
+                        2.	Remplir le tableau par des entiers
+                        3.	Introduire la valeur à rechercher
+                        4.	Cliquer sur le boutons « Rechercher »
+                        Le programme affiche ensuite un message si la valeur à rechercher existe ou non dans le tableau.
+                        </p>
+                </section>
+        </section>
+        <section id="demo">
+            <h3>demo</h3>
+            <section id="demo-cont">
+                <p>Donner la taille du tableau <input id="box-num"><button id="val"  onclick="drw()">Valider</button></p> 
+                <p>Veuiller remplir le tableau <span id="inp"></span> <button id="dra" onclick="srch()">Trier</button></p>
+                <section id="out-inp">
+                    <p id="outp">Le tableau reafficher ici après son tri</p><input type="text" name="" id="user-num">
+                    </section>
+            </section>
+        </section>
+        <section>
+            <h3>Code Source</h3>
+            <section id="Source-Code">
+                <p>
+                    function drw(){ <br>
+                        let inp=""; <br>
+                          let inmNum=document.getElementById('box-num').value ; <br>
+                          if(inmNum=10){ <br>
+                            for (let i = 0; i inmNum;i++) { <br>
+                              inp=inp+"input id=en"+i+">" <br>
+                              document.getElementById('inp').innerHTML=inp <br>
+                            } <br>
+                          } <br>
+                          else{ <br> 
+                            alert("enter une valeur entre 1 et 10") <br>
+                          } <br>
+                        } <br>
+                        function srch(){ <br>
+                          let usNum=document.getElementById('user-num').value; <br>
+                          let tsr=""; <br>
+                          for(let j=0 ; j=10 ; j++){ <br>
+                            tsr=tsr+" "+document.getElementById("en"+j).value <br>
+                            if(tsr.includes(usNum)){ <br>
+                            document.getElementById('outp').innerHTML=" la valeure recherher existe deja dans le tableu" <br>
+                            } <br>
+                            else { <br>
+                              document.getElementById('outp').innerHTML="la valeur rechercher ne existe pas dans le tableu  " <br>
+                            } <br>
+                          } <br>
+                      } <br>
+                </p>
+        </section>
+    </main>
+    <script>
+function drw(){
+    let inp="";
+      let inmNum=document.getElementById('box-num').value ;
+      if(inmNum<=10){
+        for (let i = 0; i <inmNum;i++) {
+          inp=inp+"<input id=en"+i+">"
+          document.getElementById('inp').innerHTML=inp
+        }
+      }
+      else{
+        alert("enter une valeur entre 1 et 10")
+      }
+    }
+    function srch(){
+      let usNum=document.getElementById('user-num').value;
+      let tsr="";
+      for(let j=0 ; j<=10 ; j++){
+        tsr=tsr+" "+document.getElementById("en"+j).value
+        if(tsr.includes(usNum)){
+        document.getElementById('outp').innerHTML=" la valeure recherher existe deja dans le tableu"
+        }
+        else {
+          document.getElementById('outp').innerHTML="la valeur rechercher ne existe pas dans le tableu  "
+        }
+      }
+  }
+    </script>
+</body>
+</body>
+</html>
